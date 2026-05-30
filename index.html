@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean service-based website template that can be edited and expanded over time."
+    />
+    <title>Service Business | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="logo" href="#hero">ServiceBrand</a>
+
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact" class="nav-cta">Get Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Reliable service • Clear pricing • Professional results</p>
+            <h1>Service-based solutions built around your needs.</h1>
+            <p class="hero-text">
+              Replace this section with a short explanation of the service you provide,
+              the problem you solve, and why customers should trust you.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Request a Quote</a>
+              <a class="button secondary" href="#services">View Services</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Business highlights">
+            <div>
+              <span class="stat">5+</span>
+              <p>Years of experience</p>
+            </div>
+            <div>
+              <span class="stat">100%</span>
+              <p>Customer-focused service</p>
+            </div>
+            <div>
+              <span class="stat">24hr</span>
+              <p>Typical response time</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">What we offer</p>
+            <h2>Services</h2>
+            <p>
+              Edit these cards to match your actual services. Add or remove cards as the
+              business grows.
+            </p>
+          </div>
+
+          <div class="cards three-column">
+            <article class="card">
+              <h3>Service One</h3>
+              <p>
+                Describe your main service, who it is for, and the result customers can expect.
+              </p>
+              <a href="#contact">Learn more</a>
+            </article>
+
+            <article class="card">
+              <h3>Service Two</h3>
+              <p>
+                Use this space for a second offer, package, consultation, repair, installation,
+                cleaning, coaching, or other service.
+              </p>
+              <a href="#contact">Learn more</a>
+            </article>
+
+            <article class="card">
+              <h3>Service Three</h3>
+              <p>
+                Add a premium service, monthly plan, emergency service, or customized option here.
+              </p>
+              <a href="#contact">Learn more</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Simple next steps</p>
+            <h2>How it works</h2>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <span>01</span>
+              <h3>Reach out</h3>
+              <p>Customers contact you through the form, phone, email, or booking link.</p>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <h3>Get a plan</h3>
+              <p>You review their needs and recommend the right service or package.</p>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <h3>Complete the work</h3>
+              <p>You deliver the service with clear communication and professional results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">About the business</p>
+            <h2>Built on trust, consistency, and clear communication.</h2>
+          </div>
+          <div>
+            <p>
+              Replace this text with the story of the business. Explain who you serve,
+              what makes your service different, and what customers can expect when working
+              with you.
+            </p>
+            <p>
+              This section can also include certifications, service areas, years of experience,
+              specialties, or values.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Customer feedback</p>
+            <h2>Reviews</h2>
+          </div>
+
+          <div class="cards two-column">
+            <blockquote class="quote">
+              <p>
+                “Add a real customer review here once you have one. Keep it short and specific.”
+              </p>
+              <cite>— Customer Name</cite>
+            </blockquote>
+
+            <blockquote class="quote">
+              <p>
+                “Use reviews that mention reliability, quality, speed, or professionalism.”
+              </p>
+              <cite>— Customer Name</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Get started</p>
+            <h2>Request a quote</h2>
+            <p>
+              This form is currently a front-end shell. Later, it can be connected to email,
+              Formspree, Google Sheets, a CRM, or a custom backend.
+            </p>
+            <div class="contact-details">
+              <p><strong>Phone:</strong> (000) 000-0000</p>
+              <p><strong>Email:</strong> hello@example.com</p>
+              <p><strong>Service Area:</strong> Your city and surrounding areas</p>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Service Needed
+              <select name="service">
+                <option value="">Choose a service</option>
+                <option>Service One</option>
+                <option>Service Two</option>
+                <option>Service Three</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell us what you need"></textarea>
+            </label>
+
+            <button class="button primary" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> ServiceBrand. All rights reserved.</p>
+        <a href="#hero">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
