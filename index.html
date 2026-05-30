@@ -5,220 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A clean service-based website template that can be edited and expanded over time."
+      content="Kingdom Cleaners provides hard-floor cleaning, residential cleaning, and window cleaning for refreshed homes and polished spaces."
     />
-    <title>Service Business | Home</title>
+    <title>Kingdom Cleaners | Hard-Floor, Residential, and Window Cleaning</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <nav class="nav container" aria-label="Main navigation">
-        <a class="logo" href="#hero">ServiceBrand</a>
+        <a class="brand" href="#top" aria-label="Kingdom Cleaners home">
+          <img src="assets/logo.svg" alt="" width="44" height="44" />
+          <span>Kingdom Cleaners</span>
+        </a>
 
-        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div class="nav-links" id="nav-links">
+        <div class="nav-links" id="primary-navigation">
           <a href="#services">Services</a>
+          <a href="#standards">Standards</a>
           <a href="#process">Process</a>
-          <a href="#about">About</a>
-          <a href="#testimonials">Reviews</a>
-          <a href="#contact" class="nav-cta">Get Quote</a>
+          <a href="#contact" class="nav-cta">Request Estimate</a>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section class="hero" id="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Reliable service • Clear pricing • Professional results</p>
-            <h1>Service-based solutions built around your needs.</h1>
-            <p class="hero-text">
-              Replace this section with a short explanation of the service you provide,
-              the problem you solve, and why customers should trust you.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#contact">Request a Quote</a>
-              <a class="button secondary" href="#services">View Services</a>
-            </div>
+    <main id="top">
+      <section class="hero" aria-label="Kingdom Cleaners introduction">
+        <div class="container hero-content">
+          <p class="eyebrow">Hard floors. Homes. Windows.</p>
+          <h1>Kingdom Cleaners</h1>
+          <p class="hero-lead">
+            Dependable cleaning services for brighter rooms, clearer windows, and floors
+            that look ready for company.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#contact">Request an Estimate</a>
+            <a class="button secondary" href="#services">View Services</a>
           </div>
-
-          <div class="hero-card" aria-label="Business highlights">
+          <dl class="hero-proof" aria-label="Service highlights">
             <div>
-              <span class="stat">5+</span>
-              <p>Years of experience</p>
+              <dt>3</dt>
+              <dd>Core services</dd>
             </div>
             <div>
-              <span class="stat">100%</span>
-              <p>Customer-focused service</p>
+              <dt>Fresh</dt>
+              <dd>Room-by-room care</dd>
             </div>
             <div>
-              <span class="stat">24hr</span>
-              <p>Typical response time</p>
+              <dt>Clear</dt>
+              <dd>Simple communication</dd>
             </div>
-          </div>
+          </dl>
         </div>
       </section>
 
-      <section class="section" id="services">
+      <section class="section services-preview" id="services">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">What we offer</p>
-            <h2>Services</h2>
+            <p class="eyebrow">Services</p>
+            <h2>Cleaning that makes the whole place feel lighter.</h2>
             <p>
-              Edit these cards to match your actual services. Add or remove cards as the
-              business grows.
+              Kingdom Cleaners focuses on the surfaces people notice first:
+              floors underfoot, everyday living spaces, and windows that let the light in.
             </p>
           </div>
 
-          <div class="cards three-column">
-            <article class="card">
-              <h3>Service One</h3>
+          <div class="service-grid">
+            <article class="service-card accent-green">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img">
+                  <path d="M11 33h26v6H11z" />
+                  <path d="M14 15h20l4 18H10z" />
+                  <path d="M19 15V8h10v7" />
+                </svg>
+              </div>
+              <h3>Hard-Floor Cleaning</h3>
               <p>
-                Describe your main service, who it is for, and the result customers can expect.
+                Detailed care for hard floors, including routine cleaning, shine-focused
+                refreshes, and attention to high-traffic areas.
               </p>
-              <a href="#contact">Learn more</a>
             </article>
 
-            <article class="card">
-              <h3>Service Two</h3>
+            <article class="service-card accent-gold">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img">
+                  <path d="M10 25 24 12l14 13v14H10z" />
+                  <path d="M19 39V27h10v12" />
+                  <path d="M16 17V9h7" />
+                </svg>
+              </div>
+              <h3>Residential Cleaning</h3>
               <p>
-                Use this space for a second offer, package, consultation, repair, installation,
-                cleaning, coaching, or other service.
+                Thorough home cleaning for kitchens, bathrooms, living areas, bedrooms,
+                and the details that help each room feel reset.
               </p>
-              <a href="#contact">Learn more</a>
             </article>
 
-            <article class="card">
-              <h3>Service Three</h3>
+            <article class="service-card accent-blue">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img">
+                  <path d="M10 9h28v30H10z" />
+                  <path d="M24 9v30M10 24h28" />
+                  <path d="m34 10 5-5" />
+                  <path d="m37 7 4 4" />
+                </svg>
+              </div>
+              <h3>Window Cleaning</h3>
               <p>
-                Add a premium service, monthly plan, emergency service, or customized option here.
+                Interior window cleaning that removes smudges, fingerprints, and buildup
+                so your rooms feel brighter from the first glance.
               </p>
-              <a href="#contact">Learn more</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section muted" id="process">
+      <section class="section standards" id="standards">
+        <div class="container standards-grid">
+          <div>
+            <p class="eyebrow">What to expect</p>
+            <h2>Respectful service with a polished finish.</h2>
+          </div>
+          <div class="standards-list">
+            <article>
+              <h3>Clear walkthroughs</h3>
+              <p>
+                Every estimate starts with the space, the priorities, and any details
+                that need special attention.
+              </p>
+            </article>
+            <article>
+              <h3>Careful surfaces</h3>
+              <p>
+                Floors, fixtures, glass, and finishes are handled with a clean,
+                methodical approach.
+              </p>
+            </article>
+            <article>
+              <h3>Reliable resets</h3>
+              <p>
+                The goal is simple: a cleaner space that feels easier to relax in,
+                work in, or welcome people into.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Simple next steps</p>
-            <h2>How it works</h2>
+            <p class="eyebrow">Simple process</p>
+            <h2>From first message to freshly cleaned.</h2>
           </div>
 
-          <div class="steps">
-            <div class="step">
+          <div class="process-steps">
+            <article>
               <span>01</span>
-              <h3>Reach out</h3>
-              <p>Customers contact you through the form, phone, email, or booking link.</p>
-            </div>
-            <div class="step">
+              <h3>Tell us what you need</h3>
+              <p>Share the service, rooms, floor type, window count, and timing.</p>
+            </article>
+            <article>
               <span>02</span>
-              <h3>Get a plan</h3>
-              <p>You review their needs and recommend the right service or package.</p>
-            </div>
-            <div class="step">
+              <h3>Get a clear estimate</h3>
+              <p>Kingdom Cleaners confirms the scope and recommends the right plan.</p>
+            </article>
+            <article>
               <span>03</span>
-              <h3>Complete the work</h3>
-              <p>You deliver the service with clear communication and professional results.</p>
-            </div>
+              <h3>Enjoy the refresh</h3>
+              <p>The work is completed with steady communication and a clean finish.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="container split">
-          <div>
-            <p class="eyebrow">About the business</p>
-            <h2>Built on trust, consistency, and clear communication.</h2>
-          </div>
-          <div>
-            <p>
-              Replace this text with the story of the business. Explain who you serve,
-              what makes your service different, and what customers can expect when working
-              with you.
-            </p>
-            <p>
-              This section can also include certifications, service areas, years of experience,
-              specialties, or values.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section dark" id="testimonials">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Customer feedback</p>
-            <h2>Reviews</h2>
-          </div>
-
-          <div class="cards two-column">
-            <blockquote class="quote">
-              <p>
-                “Add a real customer review here once you have one. Keep it short and specific.”
-              </p>
-              <cite>— Customer Name</cite>
-            </blockquote>
-
-            <blockquote class="quote">
-              <p>
-                “Use reviews that mention reliability, quality, speed, or professionalism.”
-              </p>
-              <cite>— Customer Name</cite>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
+      <section class="section contact" id="contact">
         <div class="container contact-grid">
           <div>
-            <p class="eyebrow">Get started</p>
-            <h2>Request a quote</h2>
+            <p class="eyebrow">Request an estimate</p>
+            <h2>Ready for a cleaner kingdom?</h2>
             <p>
-              This form is currently a front-end shell. Later, it can be connected to email,
-              Formspree, Google Sheets, a CRM, or a custom backend.
+              Send the basic details for hard-floor cleaning, residential cleaning, or
+              window cleaning. Add your real phone, email, and service area before launch.
             </p>
-            <div class="contact-details">
-              <p><strong>Phone:</strong> (000) 000-0000</p>
-              <p><strong>Email:</strong> hello@example.com</p>
-              <p><strong>Service Area:</strong> Your city and surrounding areas</p>
+            <div class="contact-details" aria-label="Contact placeholders">
+              <p><strong>Phone:</strong> Add your phone number</p>
+              <p><strong>Email:</strong> Add your business email</p>
+              <p><strong>Service Area:</strong> Add your city and nearby areas</p>
             </div>
           </div>
 
-          <form class="contact-form" action="#" method="post">
+          <form class="quote-form" id="quote-form" action="#" method="post">
             <label>
               Name
-              <input type="text" name="name" placeholder="Your name" />
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" />
             </label>
 
             <label>
               Email
-              <input type="email" name="email" placeholder="you@example.com" />
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+              />
             </label>
 
             <label>
               Service Needed
               <select name="service">
                 <option value="">Choose a service</option>
-                <option>Service One</option>
-                <option>Service Two</option>
-                <option>Service Three</option>
+                <option>Hard-Floor Cleaning</option>
+                <option>Residential Cleaning</option>
+                <option>Window Cleaning</option>
               </select>
             </label>
 
             <label>
               Message
-              <textarea name="message" rows="5" placeholder="Tell us what you need"></textarea>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell us about the space, timing, and priorities"
+              ></textarea>
             </label>
 
-            <button class="button primary" type="submit">Submit Request</button>
+            <button class="button primary" type="submit">Prepare Request</button>
+            <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -226,11 +250,12 @@
 
     <footer class="footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> ServiceBrand. All rights reserved.</p>
-        <a href="#hero">Back to top</a>
+        <a class="footer-brand" href="#top">
+          <img src="assets/logo.svg" alt="" width="34" height="34" />
+          <span>Kingdom Cleaners</span>
+        </a>
+        <p>&copy; <span id="year"></span> Kingdom Cleaners. All rights reserved.</p>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
