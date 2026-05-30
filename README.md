@@ -1,53 +1,34 @@
-# Service Website Shell
+# Kingdom Cleaners Website
 
-This is a simple service-based website starter that can be edited and expanded later.
+Static website for Kingdom Cleaners, a cleaning service brand focused on:
+
+- Hard-floor cleaning
+- Residential cleaning
+- Window cleaning
 
 ## Files
 
-- `index.html` — main website content and page sections
-- `styles.css` — layout, colors, spacing, and responsive design
-- `script.js` — mobile menu and automatic footer year
+- `index.html` - page content and sections
+- `styles.css` - layout, colors, responsive styling, and visual design
+- `script.js` - mobile navigation, footer year, and form placeholder behavior
+- `assets/logo.svg` - Kingdom Cleaners logo mark
 
-## Sections included
+## Before launch
 
-- Hero section
-- Services
-- How it works
-- About
-- Reviews
-- Contact form shell
-- Footer
+Update the contact section in `index.html` with:
 
-## How to edit
-
-Open `index.html` and replace placeholder text such as:
-
-- `ServiceBrand`
-- `Service One`, `Service Two`, `Service Three`
-- Phone number
-- Email address
+- Real phone number
+- Real business email
 - Service area
-- About section text
-- Customer reviews
+- A working form endpoint or booking link
 
-Open `styles.css` to edit colors, spacing, fonts, and layout.
+## Deployment
 
-## Vercel deployment settings
-
-This is a static HTML/CSS/JS website. When importing into Vercel, use:
+This is a static HTML/CSS/JS site. For Vercel, use:
 
 - Framework Preset: `Other`
 - Build Command: leave blank
 - Output Directory: leave blank or `.`
 - Install Command: leave blank
 
-## Contact form note
-
-The form is visual only right now. Later it can be connected to:
-
-- Formspree
-- Netlify Forms
-- Google Sheets
-- Airtable
-- A custom backend
-- A CRM
+The hero artwork and logo are local SVG assets so the site stays lightweight.
