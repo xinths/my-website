@@ -8,8 +8,11 @@ const estimatePlan = document.querySelector("#estimate-plan");
 const estimateRange = document.querySelector("#estimate-range");
 const shineDemo = document.querySelector(".shine-demo");
 const shineSlider = document.querySelector("#shine-slider");
+const demoStage = document.querySelector(".demo-stage");
 const serviceSelect = document.querySelector("#service-select");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.documentElement.classList.add("js-enabled");
 
 const planMatrix = {
   small: {
@@ -97,9 +100,42 @@ document.querySelectorAll(".package-select").forEach((button) => {
 });
 
 if (shineDemo && shineSlider) {
+  const updateShine = (value) => {
+    const cleanValue = Math.max(15, Math.min(85, Number(value)));
+    shineSlider.value = String(cleanValue);
+    shineDemo.style.setProperty("--clean", `${cleanValue}%`);
+  };
+
   shineSlider.addEventListener("input", () => {
-    shineDemo.style.setProperty("--reveal", `${shineSlider.value}%`);
+    updateShine(shineSlider.value);
   });
+
+  if (demoStage) {
+    const updateFromPointer = (event) => {
+      const bounds = demoStage.getBoundingClientRect();
+      const percent = ((event.clientX - bounds.left) / bounds.width) * 100;
+      updateShine(percent);
+    };
+
+    demoStage.addEventListener("pointerdown", (event) => {
+      demoStage.setPointerCapture(event.pointerId);
+      updateFromPointer(event);
+    });
+
+    demoStage.addEventListener("pointermove", (event) => {
+      if (demoStage.hasPointerCapture(event.pointerId)) {
+        updateFromPointer(event);
+      }
+    });
+
+    demoStage.addEventListener("pointerup", (event) => {
+      if (demoStage.hasPointerCapture(event.pointerId)) {
+        demoStage.releasePointerCapture(event.pointerId);
+      }
+    });
+  }
+
+  updateShine(shineSlider.value);
 }
 
 if (quoteForm && formNote) {
