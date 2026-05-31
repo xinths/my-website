@@ -208,9 +208,49 @@ if (shineDemo && shineSlider) {
 }
 
 if (quoteForm && formNote) {
-  quoteForm.addEventListener("submit", (event) => {
+  const quoteSubmitButton = quoteForm.querySelector("button[type='submit']");
+  const defaultSubmitText = quoteSubmitButton?.textContent || "Request Quote Follow-Up";
+
+  quoteForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    formNote.textContent = "Thanks. Your quote follow-up details are ready.";
+
+    if (!quoteForm.reportValidity()) return;
+
+    const formData = new FormData(quoteForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    formNote.classList.remove("success", "error");
+    formNote.textContent = "Sending your quote request...";
+
+    if (quoteSubmitButton) {
+      quoteSubmitButton.disabled = true;
+      quoteSubmitButton.textContent = "Sending";
+    }
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.message || "Unable to send right now. Please try again.");
+      }
+
+      quoteForm.reset();
+      formNote.classList.add("success");
+      formNote.textContent = "Thanks. Your quote request was sent.";
+    } catch (error) {
+      formNote.classList.add("error");
+      formNote.textContent = error.message || "Unable to send right now. Please try again.";
+    } finally {
+      if (quoteSubmitButton) {
+        quoteSubmitButton.disabled = false;
+        quoteSubmitButton.textContent = defaultSubmitText;
+      }
+    }
   });
 }
 
