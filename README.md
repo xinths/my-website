@@ -13,7 +13,10 @@ Static commercial-cleaning website for Kingdom Cleaners.
 - Facility walkthrough CTA
 - Commercial package cards
 - Interactive planning estimator
+- Refined commercial-office hero/proof artwork
+- Bento-style proof and trust section
 - Before/after style cleaning reveal slider
+- Local SEO metadata, robots.txt, and sitemap.xml
 - Scroll reveal animations
 - Mobile navigation
 
@@ -24,6 +27,7 @@ Static commercial-cleaning website for Kingdom Cleaners.
 - `script.js` - mobile navigation, estimator, package selection, reveal effects, and form placeholder behavior
 - `assets/logo.svg` - Kingdom Cleaners logo mark
 - `assets/cleaning-hero.svg` - local hero artwork
+- `robots.txt` and `sitemap.xml` - basic crawler and sitemap files
 
 ## Before launch
 
@@ -34,6 +38,7 @@ Update the contact section in `index.html` with:
 - Service area
 - A working form endpoint or booking link
 - Any verified trust details, such as insurance, bonding, reviews, or certifications
+- Replace placeholder proof copy with real testimonials and before/after job photos when available
 
 ## Deployment
 
