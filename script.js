@@ -14,6 +14,8 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 
 document.documentElement.classList.add("js-enabled");
 
+const officeSliderStyles = "slider.css?v=20260531-1";
+
 const planMatrix = {
   small: {
     weekly: ["Essential Care", "Scope summary: weekly reset for offices and suites."],
@@ -31,6 +33,73 @@ const planMatrix = {
     nightly: ["Crown Maintenance", "Scope summary: priority facility plan for heavy use."],
   },
 };
+
+const loadOfficeSliderStyles = () => {
+  if (document.querySelector(`link[href="${officeSliderStyles}"]`)) return;
+
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = officeSliderStyles;
+  document.head.appendChild(link);
+};
+
+const enhanceOfficeSlider = () => {
+  if (!shineDemo || !shineSlider || !demoStage) return;
+
+  loadOfficeSliderStyles();
+  shineDemo.style.setProperty("--clean", "58%");
+  shineSlider.value = "58";
+  shineSlider.setAttribute("aria-label", "Adjust dirty-to-clean office preview");
+  demoStage.setAttribute("role", "img");
+  demoStage.setAttribute("aria-label", "Office lobby before and after cleaning comparison");
+  demoStage.removeAttribute("aria-hidden");
+
+  const sliderLabel = document.querySelector(".slider-label");
+  if (sliderLabel?.firstChild) {
+    sliderLabel.firstChild.textContent = "Drag to compare before and after ";
+  }
+
+  demoStage.innerHTML = `
+    <div class="demo-layer demo-before" aria-hidden="true">
+      <div class="office-scene">
+        <div class="office-wall">
+          <div class="office-window window-left"><span></span><span></span></div>
+          <div class="office-window window-right"><span></span><span></span></div>
+          <i class="smudge smudge-one"></i>
+          <i class="smudge smudge-two"></i>
+          <i class="smudge smudge-three"></i>
+        </div>
+        <div class="reception-desk"><span></span><i></i></div>
+        <div class="lounge-chair"></div>
+        <div class="trash-bin"><span></span></div>
+        <i class="floor-mark mark-one"></i>
+        <i class="floor-mark mark-two"></i>
+        <i class="floor-mark mark-three"></i>
+        <i class="floor-mark mark-four"></i>
+      </div>
+      <span class="demo-label">Before</span>
+    </div>
+    <div class="demo-layer demo-after" aria-hidden="true">
+      <div class="office-scene">
+        <div class="office-wall">
+          <div class="office-window window-left"><span></span><span></span></div>
+          <div class="office-window window-right"><span></span><span></span></div>
+        </div>
+        <div class="reception-desk"><span></span><i></i></div>
+        <div class="lounge-chair"></div>
+        <div class="trash-bin"><span></span></div>
+        <i class="floor-shine shine-one"></i>
+        <i class="floor-shine shine-two"></i>
+        <i class="floor-shine shine-three"></i>
+        <i class="floor-shine shine-four"></i>
+      </div>
+      <span class="demo-label">After</span>
+    </div>
+    <div class="demo-handle"><span>Drag</span></div>
+  `;
+};
+
+enhanceOfficeSlider();
 
 if (year) {
   year.textContent = new Date().getFullYear();
