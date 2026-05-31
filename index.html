@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kingdom Cleaners provides commercial cleaning, hard-floor cleaning, and window cleaning for offices, storefronts, and shared business spaces."
+      content="Kingdom Cleaners provides walkthrough-based commercial cleaning, hard-floor care, and window cleaning for offices, storefronts, and shared business facilities."
     />
-    <title>Kingdom Cleaners | Commercial Cleaning, Floors, and Windows</title>
-    <link rel="stylesheet" href="styles.css?v=20260530-2" />
-    <script src="script.js?v=20260530-2" defer></script>
+    <meta name="theme-color" content="#174b34" />
+    <meta property="og:title" content="Kingdom Cleaners | Commercial Cleaning for Client-Ready Spaces" />
+    <meta
+      property="og:description"
+      content="Commercial cleaning, hard-floor care, and window cleaning with clear scopes and walkthrough-first plans."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://xinths.github.io/my-website/assets/cleaning-hero.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Kingdom Cleaners | Commercial Cleaning for Client-Ready Spaces</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/cleaning-hero.svg" as="image" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260530-3" />
+    <script src="script.js?v=20260530-3" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kingdom Cleaners",
+        "description": "Commercial cleaning, hard-floor care, and window cleaning for offices, storefronts, and shared business facilities.",
+        "image": "https://xinths.github.io/my-website/assets/cleaning-hero.svg",
+        "areaServed": "Local offices, storefronts, and business districts",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hard-Floor Cleaning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Window Cleaning"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -36,7 +80,7 @@
           <a href="#packages">Packages</a>
           <a href="#proof">Proof</a>
           <a href="#estimate">Estimator</a>
-          <a href="#contact" class="nav-cta">Book Walkthrough</a>
+          <a href="#contact" class="nav-cta">Request Quote</a>
         </div>
       </nav>
     </header>
@@ -46,27 +90,33 @@
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Commercial cleaning for client-ready spaces</p>
-            <h1>Make your business feel freshly opened every day.</h1>
+            <h1>A cleaner first impression, every business day.</h1>
             <p class="hero-lead">
               Kingdom Cleaners helps offices, storefronts, and shared facilities stay
-              polished with commercial cleaning, hard-floor care, and clear-window service.
+              polished with clear-scope commercial cleaning, hard-floor care, and
+              clear-window service.
             </p>
+            <div class="hero-badges" aria-label="Why businesses choose Kingdom Cleaners">
+              <span>24-hour quote follow-up</span>
+              <span>After-hours friendly</span>
+              <span>Floors + windows</span>
+            </div>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button primary" href="#contact">Book a Walkthrough</a>
-              <a class="button secondary" href="#packages">Compare Packages</a>
+              <a class="button primary" href="#contact">Request Quote in 24 Hours</a>
+              <a class="button secondary" href="#proof">See the Difference</a>
             </div>
             <dl class="hero-proof" aria-label="Service highlights">
               <div>
-                <dt><span data-count="3">0</span></dt>
-                <dd>Core commercial services</dd>
+                <dt>Walkthrough</dt>
+                <dd>Scope before quote</dd>
               </div>
               <div>
                 <dt>After-hours</dt>
-                <dd>Scheduling ready</dd>
+                <dd>Low-disruption cleaning</dd>
               </div>
               <div>
                 <dt>Custom</dt>
-                <dd>Walkthrough-based plans</dd>
+                <dd>Office, floor, and glass plans</dd>
               </div>
             </dl>
           </div>
@@ -74,8 +124,8 @@
           <aside class="hero-estimator reveal" id="estimate" aria-label="Quick cleaning estimate">
             <div class="estimator-header">
               <p class="eyebrow">Quick scope builder</p>
-              <h2>Find your likely plan.</h2>
-              <p>Use this as a planning guide. Final pricing should follow a facility walkthrough.</p>
+              <h2>Build your cleaning scope.</h2>
+              <p>Use this as a planning guide, then send the details for a walkthrough-based quote.</p>
             </div>
 
             <form class="estimate-widget" id="estimate-widget">
@@ -117,7 +167,7 @@
             <div class="estimate-result" aria-live="polite">
               <span class="result-label">Recommended plan</span>
               <strong id="estimate-plan">Business Shine</strong>
-              <p id="estimate-range">Planning range: $650 - $1,250/mo</p>
+              <p id="estimate-range">Scope summary: recurring cleaning with floor care included.</p>
             </div>
           </aside>
         </div>
@@ -125,10 +175,10 @@
 
       <section class="trust-strip" aria-label="Commercial fit">
         <div class="container trust-grid">
-          <p>Built for offices</p>
-          <p>Storefront-ready</p>
+          <p>Walkthrough-first quotes</p>
+          <p>Office + storefront ready</p>
           <p>Recurring plans</p>
-          <p>Floor + window bundles</p>
+          <p>Floor + window care</p>
         </div>
       </section>
 
@@ -252,42 +302,62 @@
       </section>
 
       <section class="section proof-section" id="proof">
-        <div class="container proof-grid">
-          <div class="proof-copy reveal">
-            <p class="eyebrow">Interactive preview</p>
-            <h2>A cleaner space changes the whole first impression.</h2>
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Proof that feels visible</p>
+            <h2>Clean should show up before anyone says a word.</h2>
             <p>
-              Drag the slider to see the kind of visual contrast customers respond to:
-              cleaner floor lines, brighter glass, and a front area that feels ready.
+              Prospects want to know what changes after the visit: brighter glass,
+              better floor lines, calmer shared spaces, and a plan they can trust.
             </p>
-            <ul class="check-list">
-              <li>Better first impression for clients and staff</li>
-              <li>Recurring plan options for predictable upkeep</li>
-              <li>Add-on windows and floor refreshes for visible wins</li>
-            </ul>
           </div>
 
-          <div class="shine-demo reveal" style="--clean: 62%">
-            <div class="demo-stage" aria-hidden="true">
-              <div class="demo-before">
-                <span>Before</span>
-              </div>
-              <div class="demo-after">
-                <span>After</span>
-              </div>
-              <div class="demo-handle"><span>Drag</span></div>
-            </div>
-            <label class="slider-label">
-              Drag or tap the preview
-              <input
-                id="shine-slider"
-                type="range"
-                min="15"
-                max="85"
-                value="62"
-                aria-label="Adjust cleaning reveal preview"
+          <div class="proof-bento">
+            <article class="proof-photo-card reveal">
+              <img
+                src="assets/cleaning-hero.svg"
+                alt="Freshly cleaned commercial lobby with polished hard floors and clear windows"
               />
-            </label>
+              <div>
+                <span>Visual standard</span>
+                <h3>Polished floors. Clear glass. Client-ready rooms.</h3>
+              </div>
+            </article>
+
+            <article class="proof-card reveal">
+              <span>Trust signal</span>
+              <h3>Visible finish quality</h3>
+              <p>Floor shine, clearer entry glass, and reset common areas are the details buyers notice first.</p>
+            </article>
+
+            <article class="proof-card reveal">
+              <span>Industries served</span>
+              <h3>Offices, retail, clinics, and shared facilities</h3>
+              <p>Clear categories make it easy for buyers to recognize their space quickly.</p>
+            </article>
+
+            <div class="shine-demo reveal" style="--clean: 62%">
+              <div class="demo-stage" aria-hidden="true">
+                <div class="demo-before">
+                  <span>Before</span>
+                </div>
+                <div class="demo-after">
+                  <span>After</span>
+                </div>
+                <div class="demo-handle"><span>Drag</span></div>
+              </div>
+              <label class="slider-label">
+                Drag or tap the preview
+                <input
+                  id="shine-slider"
+                  type="range"
+                  min="15"
+                  max="85"
+                  value="62"
+                  aria-label="Adjust cleaning reveal preview"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </section>
@@ -300,17 +370,17 @@
           </div>
           <div class="standards-list">
             <article class="reveal">
-              <h3>Walkthrough-first quotes</h3>
+              <h3>Walkthrough-first scope</h3>
               <p>
                 Commercial cleaning depends on size, traffic, surfaces, frequency,
-                access, and timing. A walkthrough makes the quote feel fair.
+                access, and timing. A walkthrough makes the plan feel clear.
               </p>
             </article>
             <article class="reveal">
-              <h3>Clear scope</h3>
+              <h3>Review-ready trust details</h3>
               <p>
-                Spell out what is included, what is optional, and how often each area
-                is cleaned so buyers can compare plans quickly.
+                Reviews, insurance details, bonding details, and service-area clarity
+                give buyers confidence before they book.
               </p>
             </article>
             <article class="reveal">
@@ -344,8 +414,8 @@
             </article>
             <article class="reveal">
               <span>03</span>
-              <h3>Choose the plan</h3>
-              <p>Select the recurring commercial package and add-ons that fit the budget.</p>
+              <h3>Approve the scope</h3>
+              <p>Select the recurring commercial package and add-ons that fit the space.</p>
             </article>
             <article class="reveal">
               <span>04</span>
@@ -363,12 +433,12 @@
             <h2>Ready to make your business shine?</h2>
             <p>
               Send the basics and Kingdom Cleaners can turn the scope into a commercial
-              cleaning plan. Add your real phone, email, and service area before launch.
+              cleaning plan for offices, storefronts, clinics, and shared spaces.
             </p>
-            <div class="contact-details" aria-label="Contact placeholders">
-              <p><strong>Phone:</strong> Add your phone number</p>
-              <p><strong>Email:</strong> Add your business email</p>
-              <p><strong>Service Area:</strong> Add your city and nearby business districts</p>
+            <div class="contact-details" aria-label="Contact highlights">
+              <p><strong>Response:</strong> Quote follow-up after request</p>
+              <p><strong>Best Fit:</strong> Offices, storefronts, clinics, and shared facilities</p>
+              <p><strong>Service Area:</strong> Local business districts and nearby commercial spaces</p>
             </div>
           </div>
 
@@ -394,6 +464,22 @@
             </label>
 
             <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" placeholder="Best callback number" />
+            </label>
+
+            <label>
+              Facility Type
+              <select name="facility">
+                <option>Office / professional suite</option>
+                <option>Storefront / retail</option>
+                <option>Clinic / wellness space</option>
+                <option>Shared facility</option>
+                <option>Other commercial space</option>
+              </select>
+            </label>
+
+            <label>
               Interested In
               <select name="service" id="service-select">
                 <option>Commercial Cleaning</option>
@@ -414,7 +500,7 @@
               ></textarea>
             </label>
 
-            <button class="button primary" type="submit">Prepare Walkthrough Request</button>
+            <button class="button primary" type="submit">Request Quote Follow-Up</button>
             <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
           </form>
         </div>
