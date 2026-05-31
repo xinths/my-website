@@ -15,7 +15,7 @@ Static commercial-cleaning website for Kingdom Cleaners.
 - Interactive planning estimator
 - Refined commercial-office hero/proof artwork
 - Bento-style proof and trust section
-- Before/after style cleaning reveal slider
+- Office-lobby before/after cleaning reveal slider
 - Local SEO metadata, robots.txt, and sitemap.xml
 - Scroll reveal animations
 - Mobile navigation
