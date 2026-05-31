@@ -25,9 +25,20 @@ Static commercial-cleaning website for Kingdom Cleaners.
 - `index.html` - page content and sections
 - `styles.css` - layout, responsive styling, animation, and visual design
 - `script.js` - mobile navigation, estimator, package selection, reveal effects, and form placeholder behavior
+- `api/quote.js` - Vercel Function that emails quote requests through Resend
 - `assets/logo.svg` - Kingdom Cleaners logo mark
 - `assets/cleaning-hero.svg` - local hero artwork
 - `robots.txt` and `sitemap.xml` - basic crawler and sitemap files
+
+## Quote email setup
+
+Deploy on Vercel and add these Project Settings environment variables:
+
+- `RESEND_API_KEY` - Resend API key from the Vercel Resend integration or Resend dashboard
+- `QUOTE_TO_EMAIL` - inbox that should receive quote requests
+- `QUOTE_FROM_EMAIL` - verified sender, such as `Kingdom Cleaners <quotes@yourdomain.com>`
+
+For production sending, verify the sender domain in Resend.
 
 ## Before launch
 
@@ -36,7 +47,7 @@ Update the contact section in `index.html` with:
 - Real phone number
 - Real business email
 - Service area
-- A working form endpoint or booking link
+- Vercel environment variables for quote request emails
 - Any verified trust details, such as insurance, bonding, reviews, or certifications
 - Replace placeholder proof copy with real testimonials and before/after job photos when available
 
