@@ -16,19 +16,19 @@ document.documentElement.classList.add("js-enabled");
 
 const planMatrix = {
   small: {
-    weekly: ["Essential Care", "$300 - $650/mo"],
-    multi: ["Business Shine", "$650 - $1,250/mo"],
-    nightly: ["Crown Maintenance", "$1,250 - $2,400/mo"],
+    weekly: ["Essential Care", "Scope summary: weekly reset for offices and suites."],
+    multi: ["Business Shine", "Scope summary: recurring cleaning with floor care included."],
+    nightly: ["Crown Maintenance", "Scope summary: high-frequency care for busy spaces."],
   },
   medium: {
-    weekly: ["Business Shine", "$750 - $1,500/mo"],
-    multi: ["Business Shine", "$1,700 - $3,400/mo"],
-    nightly: ["Crown Maintenance", "$3,000 - $6,200/mo"],
+    weekly: ["Business Shine", "Scope summary: larger weekly plan with priority zones."],
+    multi: ["Business Shine", "Scope summary: multi-day cleaning plus floor refreshes."],
+    nightly: ["Crown Maintenance", "Scope summary: nightly service for high-traffic areas."],
   },
   large: {
-    weekly: ["Crown Maintenance", "Custom walkthrough quote"],
-    multi: ["Crown Maintenance", "Custom facility plan"],
-    nightly: ["Crown Maintenance", "Priority facility plan"],
+    weekly: ["Crown Maintenance", "Scope summary: custom facility plan after walkthrough."],
+    multi: ["Crown Maintenance", "Scope summary: recurring facility plan with add-ons."],
+    nightly: ["Crown Maintenance", "Scope summary: priority facility plan for heavy use."],
   },
 };
 
@@ -61,7 +61,7 @@ const updateEstimate = () => {
   const size = formData.get("size") || "small";
   const frequency = formData.get("frequency") || "weekly";
   const addOns = formData.getAll("addon");
-  const [plan, range] = planMatrix[size][frequency];
+  const [plan, summary] = planMatrix[size][frequency];
 
   let finalPlan = plan;
   if (addOns.length >= 2 && plan === "Essential Care") {
@@ -72,7 +72,7 @@ const updateEstimate = () => {
   }
 
   estimatePlan.textContent = finalPlan;
-  estimateRange.textContent = `Planning range: ${range}`;
+  estimateRange.textContent = summary;
 };
 
 if (estimateWidget) {
@@ -94,7 +94,7 @@ document.querySelectorAll(".package-select").forEach((button) => {
 
     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
     if (formNote) {
-      formNote.textContent = `${packageName} selected. Add your contact details and facility notes.`;
+      formNote.textContent = `${packageName} selected. Complete the form with facility notes.`;
     }
   });
 });
@@ -141,7 +141,7 @@ if (shineDemo && shineSlider) {
 if (quoteForm && formNote) {
   quoteForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    formNote.textContent = "Walkthrough request prepared. Add a real form endpoint before launch.";
+    formNote.textContent = "Thanks. Your quote follow-up details are ready.";
   });
 }
 
