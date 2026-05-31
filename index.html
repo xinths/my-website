@@ -19,8 +19,8 @@
     <title>Kingdom Cleaners | Commercial Cleaning for Client-Ready Spaces</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
     <link rel="preload" href="assets/cleaning-hero.svg" as="image" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260531-1" />
-    <script src="script.js?v=20260531-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260531-2" />
+    <script src="script.js?v=20260531-2" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -493,10 +493,10 @@
             </div>
           </div>
 
-          <form class="quote-form reveal" id="quote-form" action="#" method="post">
+          <form class="quote-form reveal" id="quote-form" action="/api/quote" method="post">
             <label>
               Name
-              <input type="text" name="name" autocomplete="name" placeholder="Your name" />
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
             </label>
 
             <label>
@@ -511,12 +511,13 @@
                 name="email"
                 autocomplete="email"
                 placeholder="you@example.com"
+                required
               />
             </label>
 
             <label>
               Phone
-              <input type="tel" name="phone" autocomplete="tel" placeholder="Best callback number" />
+              <input type="tel" name="phone" autocomplete="tel" placeholder="Best callback number" required />
             </label>
 
             <label>
