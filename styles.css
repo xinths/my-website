@@ -149,7 +149,8 @@ textarea {
   overflow: hidden;
   padding: 84px 0 68px;
   background:
-    linear-gradient(90deg, rgba(244, 250, 247, 0.98) 0%, rgba(244, 250, 247, 0.94) 42%, rgba(244, 250, 247, 0.38) 72%),
+    linear-gradient(90deg, rgba(244, 250, 247, 0.98) 0%, rgba(244, 250, 247, 0.92) 43%, rgba(244, 250, 247, 0.28) 72%),
+    linear-gradient(180deg, rgba(244, 250, 247, 0.12), rgba(13, 47, 32, 0.2)),
     url("assets/cleaning-hero.svg");
   background-position: center;
   background-size: cover;
@@ -230,9 +231,27 @@ p {
 
 .hero-lead {
   max-width: 620px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   color: #31443a;
   font-size: 1.18rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.hero-badges span {
+  padding: 8px 10px;
+  border: 1px solid rgba(23, 75, 52, 0.16);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 900;
+  box-shadow: 0 12px 30px rgba(16, 33, 25, 0.08);
 }
 
 .hero-actions {
@@ -446,6 +465,7 @@ textarea {
 
 .service-card,
 .package-card,
+.proof-card,
 .process-steps article,
 .standards-list article,
 .quote-form,
@@ -671,6 +691,78 @@ textarea {
 .proof-copy {
   position: sticky;
   top: 108px;
+}
+
+.proof-bento {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 18px;
+}
+
+.proof-photo-card {
+  position: relative;
+  min-height: 520px;
+  grid-row: 1 / span 2;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.proof-photo-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proof-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 38%, rgba(16, 33, 25, 0.82)),
+    linear-gradient(90deg, rgba(16, 33, 25, 0.14), transparent 48%);
+}
+
+.proof-photo-card div {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  left: 22px;
+  z-index: 1;
+  max-width: 520px;
+}
+
+.proof-photo-card span,
+.proof-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.proof-photo-card h3 {
+  max-width: 560px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.15rem;
+}
+
+.proof-card {
+  padding: 24px;
+}
+
+.proof-card h3 {
+  font-size: 1.35rem;
+}
+
+.proof-bento .shine-demo {
+  grid-column: 1 / -1;
 }
 
 .shine-demo {
@@ -1002,7 +1094,8 @@ a:focus-visible {
   .hero {
     padding: 66px 0 58px;
     background-image:
-      linear-gradient(90deg, rgba(244, 250, 247, 0.98) 0%, rgba(244, 250, 247, 0.92) 64%, rgba(244, 250, 247, 0.62) 100%),
+      linear-gradient(90deg, rgba(244, 250, 247, 0.98) 0%, rgba(244, 250, 247, 0.93) 64%, rgba(244, 250, 247, 0.62) 100%),
+      linear-gradient(180deg, rgba(244, 250, 247, 0.12), rgba(13, 47, 32, 0.2)),
       url("assets/cleaning-hero.svg");
   }
 }
@@ -1035,9 +1128,18 @@ a:focus-visible {
   .hero-actions,
   .service-grid,
   .package-grid,
+  .proof-bento,
   .process-steps {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .proof-photo-card {
+    min-height: 360px;
+  }
+
+  .proof-photo-card h3 {
+    font-size: 1.55rem;
   }
 
   .trust-grid {
