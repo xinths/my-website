@@ -14,7 +14,19 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 
 document.documentElement.classList.add("js-enabled");
 
+const cleanHeroStyles = "clean-hero.css?v=20260602-1";
 const officeSliderStyles = "slider.css?v=20260531-1";
+
+const loadStylesheet = (href) => {
+  if (document.querySelector(`link[href="${href}"]`)) return;
+
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = href;
+  document.head.appendChild(link);
+};
+
+loadStylesheet(cleanHeroStyles);
 
 const planMatrix = {
   small: {
@@ -35,12 +47,7 @@ const planMatrix = {
 };
 
 const loadOfficeSliderStyles = () => {
-  if (document.querySelector(`link[href="${officeSliderStyles}"]`)) return;
-
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = officeSliderStyles;
-  document.head.appendChild(link);
+  loadStylesheet(officeSliderStyles);
 };
 
 const enhanceOfficeSlider = () => {
